@@ -1,0 +1,50 @@
+.header-nav {
+  background: #fff;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 0px 4px 6px #0c002e14;
+  padding: 0.5rem 1rem;
+}
+
+.nav-logo {
+  height: 50px;
+}
+
+.nav-links .nav-link {
+  color: #734b8e;
+  font-family: "Axiforma", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin: 0 8px;
+  transition: color 0.3s ease;
+}
+
+.nav-links .nav-link:hover {
+  color: #2671cd;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.crm-btn,
+.login-btn {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  background: linear-gradient(
+    200deg,
+    rgba(38, 113, 205, 1) 0%,
+    rgba(38, 113, 205, 1) 3%,
+    rgba(164, 104, 194, 1) 70%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.crm-btn:hover,
+.login-btn:hover {
+  opacity: 0.9;
+}

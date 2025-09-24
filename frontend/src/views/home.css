@@ -1,0 +1,19 @@
+.home-container {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1440px; /* adjust as per design */
+  background-color: #ffffff;
+  font-family: "Axiforma", sans-serif;
+}
+
+/* General section spacing */
+.home-container section {
+  padding: 60px 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .home-container section {
+    padding: 40px 15px;
+  }
+}

@@ -1,0 +1,244 @@
+.group {
+  height: 435px;
+  left: calc(50% - 639px);
+  position: absolute;
+  top: 1554px;
+  width: 1296px;
+}
+
+.group .rectangle-3 {
+  background-color: #053e84e6;
+  border-radius: 30px;
+  height: 435px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1278px;
+}
+
+.group .text-wrapper-43 {
+  color: #ffffffcc;
+  font-family: "Axiforma-Regular", Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  left: 34.18%;
+  letter-spacing: 0.14px;
+  line-height: 25.2px;
+  position: absolute;
+  top: 106px;
+  white-space: nowrap;
+  width: 33.33%;
+}
+
+.group .img {
+  height: 33px;
+  left: 427px;
+  position: absolute;
+  top: 352px;
+  width: 135px;
+}
+
+.group .mukesh-jairath,
+.group .umang-sharma-product,
+.group .syed-meraj-naqvi,
+.group .mirdul-pandey,
+.group .ravikant-singh,
+.group .manoj-karn-chief {
+  color: #ffffff;
+  font-family: "Axiforma-Regular", Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.13px;
+  line-height: 13px;
+  position: absolute;
+  text-align: center;
+  top: 357px;
+}
+
+.group .mukesh-jairath {
+  color: transparent;
+  left: 33.8%;
+  width: 8.26%;
+}
+.group .umang-sharma-product {
+  left: 55.63%;
+  width: 7.95%;
+}
+.group .syed-meraj-naqvi {
+  left: 44.52%;
+  width: 8.8%;
+}
+.group .mirdul-pandey {
+  left: 66.2%;
+  width: 8.26%;
+}
+.group .ravikant-singh {
+  left: 76.93%;
+  width: 8.26%;
+}
+.group .manoj-karn-chief {
+  left: 87.65%;
+  width: 8.26%;
+}
+
+.group .text-wrapper-44 {
+  color: #ffffff;
+  letter-spacing: 0.02px;
+  line-height: 12px;
+}
+.group .text-wrapper-45 {
+  color: #ffffffcc;
+  font-family: "Axiforma-Light", Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.01px;
+  line-height: 12px;
+}
+.group .text-wrapper-46 {
+  letter-spacing: 0.02px;
+  line-height: 12px;
+}
+.group .text-wrapper-47 {
+  font-family: "Axiforma-Light", Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  letter-spacing: 0.01px;
+  line-height: 12px;
+}
+.group .text-wrapper-48 {
+  font-family: "Axiforma-Light", Helvetica, sans-serif;
+  font-size: 8px;
+  font-weight: 300;
+  letter-spacing: 0.01px;
+  line-height: 12px;
+}
+
+.group .text-wrapper-49 {
+  color: #ffffffcc;
+  font-family: "Axiforma-Regular", Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  left: calc(50% - 595px);
+  letter-spacing: 0.14px;
+  line-height: 26px;
+  position: absolute;
+  top: 166px;
+  width: 334px;
+}
+
+.group .text-wrapper-50 {
+  color: #ffffff;
+  font-family: "Axiforma-SemiBold", Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  left: 44.75%;
+  letter-spacing: 0.14px;
+  line-height: 28.8px;
+  position: absolute;
+  top: 52px;
+  white-space: nowrap;
+  width: 12.11%;
+}
+
+.group .img-2 {
+  height: 185px;
+  left: 426px;
+  position: absolute;
+  top: 162px;
+  width: 132px;
+}
+/* .group .img-2 {
+  position: absolute;
+  left: 515px;            
+  top: 166px;             
+  width: 120.916px;      
+  height: 170px;          
+  opacity: 1;             
+  transform: rotate(0deg);
+  object-fit: cover;
+} */
+
+.group .img-3 {
+  height: 179px;
+  left: 711px;
+  position: absolute;
+  top: 165px;
+  width: 126px;
+}
+.group .img-4 {
+  height: 179px;
+  left: 573px;
+  position: absolute;
+  top: 165px;
+  width: 126px;
+}
+.group .img-5 {
+  height: 179px;
+  left: 850px;
+  position: absolute;
+  top: 165px;
+  width: 126px;
+}
+.group .img-6 {
+  height: 178px;
+  left: 990px;
+  position: absolute;
+  top: 166px;
+  width: 125px;
+}
+.group .img-7 {
+  height: 178px;
+  left: 1129px;
+  position: absolute;
+  top: 166px;
+  width: 125px;
+}
+
+.group .line {
+  height: 168px;
+  left: 410px;
+  object-fit: cover;
+  position: absolute;
+  top: 172px;
+  width: 1px;
+}
+
+/* -------------------------------------------- */
+
+/* director name label box */
+.group .label-box {
+  position: absolute;
+  left: 429px;
+  top: 352px;
+  width: 127.95738220214844px;
+  height: 33px;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  background: #053e84;
+  opacity: 1;
+  transform: rotate(0deg);
+
+  /* Center two lines vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* Optional: ensure it sits above background elements */
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+/* Typography inside the box */
+.group .label-box .label-name {
+  font-size: 12px;
+  line-height: 12px;
+  color: #ffffff;
+}
+
+.group .label-box .label-role {
+  font-size: 9px;
+  line-height: 12px;
+  color: #ffffffcc;
+  margin-top: 2px;
+}

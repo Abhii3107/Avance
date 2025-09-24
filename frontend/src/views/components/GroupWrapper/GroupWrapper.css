@@ -1,0 +1,177 @@
+/* src/sections/GroupWrapper/GroupWrapper.css */
+
+.gw {
+  position: relative;
+  width: 100%;
+  padding-top: 24px;            /* breathing space above pill */
+}
+
+/* Title pill (Anima: 875x80) */
+.gw-rail {
+  position: relative;
+  margin: 0 auto;
+  width: 875px;
+  height: 80px;
+  background-color: #d9d9d9;    /* rectangle-4 */
+  border-radius: 15px;
+}
+
+.gw-left {
+  position: absolute;
+  inset: 0 auto 0 0;            /* left filled segment */
+  width: 492px;                  /* rectangle-5 width */
+  background-color: #734b8e;
+  border-radius: 15px 0 0 15px;
+}
+
+.gw-title {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.14px;
+  font-weight: 400;
+  color: transparent;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: "Axiforma-Regular", Helvetica, Arial, sans-serif;
+}
+
+.gw-title-left {
+  color: #ffffff;
+  letter-spacing: 0.07px;
+}
+
+.gw-title-right {
+  color: #053e84;
+  font-family: "Axiforma-SemiBold", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.07px;
+}
+
+/* Category strip container (sits under pill) */
+.gw-strip {
+  position: relative;
+  margin-top: 28px;
+  min-height: 208px;
+}
+
+.gw-strip-gradient {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 1088px;                 /* rectangle-9 width */
+  height: 208px;
+  border-radius: 30px;
+  background: linear-gradient(180deg, #053e84 0%, #734b8e 100%);
+}
+
+.gw-strip-band {
+  position: absolute;
+  left: 50%;
+  top: 8px;                      /* slight offset like rectangle-10 */
+  transform: translateX(-50%);
+  width: 1088px;
+  height: 200px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(2px);
+}
+
+/* Faint vertical rounded shapes (like rectangles 11–15) */
+.gw-pill {
+  position: absolute;
+  top: 20px;
+  width: 96px;
+  height: 160px;
+  border-radius: 50px;
+  background: rgba(5, 62, 132, 0.05);
+  transform: rotate(-90deg);
+}
+.gw-pill-1 { left: 176px; }
+.gw-pill-2 { left: 360px; }
+.gw-pill-3 { left: 544px; }
+.gw-pill-4 { left: 728px; }
+.gw-pill-5 { left: 912px; }
+
+/* Icon row and cards */
+.gw-row {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 72%;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.gw-card {
+  text-align: center;
+  color: #27252acc;
+}
+
+.gw-card-inner {
+  width: 106px;
+  height: 106px;
+  border-radius: 30px;
+  background: radial-gradient(50% 50% at 50% 53%, rgba(241,237,244,0.4) 0%, rgba(115,75,142,0.4) 100%);
+  box-shadow: inset 0 4px 9px 1px rgba(115, 75, 142, 0.1), 0 4px 0 rgba(255,255,255,0.25);
+  display: grid;
+  place-items: center;
+}
+
+.gw-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.gw-label {
+  margin-top: 10px;
+  font-family: "Axiforma-Medium", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+/* Three-dot menu at right */
+.gw-dots {
+  display: grid;
+  gap: 6px;
+  width: 10px;
+  margin-left: 8px;
+}
+.gw-dots span {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .gw-rail { transform: scale(0.95); transform-origin: center; }
+  .gw-row { width: 84%; gap: 24px; }
+  .gw-card-inner { width: 96px; height: 96px; }
+}
+@media (max-width: 768px) {
+  .gw-rail { transform: scale(0.85); }
+  .gw-title { font-size: 36px; line-height: 48px; }
+  .gw-strip-gradient, .gw-strip-band { width: 92%; }
+  .gw-row { width: 88%; gap: 16px; }
+  .gw-icon { width: 56px; height: 56px; }
+}
+@media (max-width: 576px) {
+  .gw-rail { width: 100%; height: 72px; }
+  .gw-left { width: 56%; }
+  .gw-title { font-size: 28px; line-height: 40px; padding: 0 12px; }
+  .gw-row { width: 92%; gap: 12px; }
+  .gw-card-inner { width: 84px; height: 84px; border-radius: 24px; }
+  .gw-icon { width: 48px; height: 48px; }
+  .gw-label { font-size: 14px; }
+}
