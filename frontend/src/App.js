@@ -10,6 +10,7 @@ function App() {
       <Home />
       {/* <Desktop /> */}
       {/* <Footer/> */}
+    
     </div>
   );
 }

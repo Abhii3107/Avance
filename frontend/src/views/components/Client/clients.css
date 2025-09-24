@@ -1,0 +1,150 @@
+/* src/components/Clients/clients.css */
+
+:root {
+  --bg-soft: #f5f9ff;
+  --rail-bg: #efe9f7;
+  --primary-deep: #053e84;
+  --accent: #734b8e;
+  --card-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+/* Section spacing */
+.clients-section {
+  background: #fff;
+  padding: 56px 0;
+}
+
+/* Wrapper keeps content centered like the mock */
+.clients-wrap {
+  background: var(--bg-soft);
+  border-radius: 30px;
+  box-shadow: 0 4px 10px 10px rgba(0,0,0,0.25);
+  padding: 28px 24px 36px;
+}
+
+/* Header: title left, pill tab right (rectangle-57.svg vibe) */
+.clients-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.clients-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 32px;
+  color: #27252a;
+}
+
+/* Partners pill (rounded, gradient, 60px tall like reference) */
+.partners-tab {
+  height: 60px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1;
+  border-radius: 18px;
+  background: linear-gradient(180deg, #6a3ea1 0%, #734b8e 100%);
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.25);
+}
+
+/* Rail: soft rounded container for logo cards */
+.clients-rail {
+  position: relative;
+  margin-top: 14px;
+  padding: 22px 12px;
+  border-radius: 30px;
+  background: radial-gradient(50% 50% at 50% 53%,
+              rgba(241,237,244,0.40) 0%,
+              rgba(115,75,142,0.40) 100%);
+  background-color: var(--rail-bg);
+  overflow: hidden;
+}
+
+/* Logo cards (glassmorphism like Anima output) */
+.client-card {
+  width: 200px;
+  height: 200px;
+  border: 0;
+  border-radius: 30px;
+  background: radial-gradient(93% 93% at 50% 52.5%,
+              rgba(241, 237, 244, 0.4) 0%,
+              rgba(115, 75, 142, 0.4) 100%);
+  /* Keep both inset glow and top highlight in one declaration */
+  box-shadow:
+    inset 0px 4px 9.1px 1px rgba(115, 75, 142, 0.10),
+    0px 4px 0px 0px rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  display: flex;               /* center content */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner layout so logos are nicely centered and sized */
+.client-card .card-body {
+  padding: 18px;
+}
+
+.client-logo {
+  max-height: 90px;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 1px 1px rgba(0,0,0,0.06));
+}
+
+/* Right-edge fade similar to the mask-group image in the mock */
+.rail-mask-fade {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 110px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(239,233,247,0.75) 55%, rgba(239,233,247,1) 100%);
+}
+
+/* If using an actual mask image instead of CSS, uncomment .rail-mask-img in JSX */
+.rail-mask-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 110px;
+  object-fit: cover;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .clients-title {
+    font-size: 24px;
+  }
+  .partners-tab {
+    height: 48px;
+    padding: 0 18px;
+    font-size: 18px;
+    border-radius: 14px;
+  }
+  .client-card {
+    min-height: 130px;
+  }
+  .client-logo {
+      max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  }
+}
+
+.client-card-body {
+  width: 100%;
+  height: 100%;
+  padding: 0;                  /* keep exact 200x200 visual */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

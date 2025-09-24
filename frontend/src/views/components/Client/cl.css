@@ -1,0 +1,85 @@
+/* src/components/client-showcase.css */
+
+/* Outer container */
+.clients-outer {
+  width: 1278px;
+  height: 278px;
+  /* Using margins to reflect figma top/left placement; switch to position if needed */
+  /* margin-top: 828px;
+  margin-left: 81px; */
+
+  /* Radial gradient as specified */
+  background: radial-gradient(
+   rgba(115, 75, 142, 0.1)
+  );
+
+  /* Rounded corners per sides specified */
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+
+  /* Combine inset and regular shadow in one declaration (comma-separated) */
+  box-shadow:
+    inset 0px 4px 9.1px 1px rgba(115, 75, 142, 0.1),
+    0px 4px 0px 0px rgba(255, 255, 255, 0.25);
+
+  /* Frosted glass blur over translucent background */
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+
+  opacity: 1;
+
+  /* Layout */
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* Row that holds the five boxes */
+.clients-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* controls spacing between boxes */
+  width: 100%;
+}
+
+/* Each 200x200 box */
+.client-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
+  background: rgba(115, 75, 142, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Image fit */
+.client-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* use 'cover' if full-bleed is desired */
+}
+
+
+/* -----------*/
+
+/* Clients.css */
+.clients-container {
+  color: white;
+  width: 431px;
+  height: 60px;
+  /* top: 768px; */
+  left: 81px;
+  background-color: rgba(115, 75, 142, 1);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* aligns text left inside the container */
+  padding-left: 62px; /* approximate offset to match inner text left */
+  margin-left: 514px;
+}
+

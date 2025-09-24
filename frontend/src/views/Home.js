@@ -36,6 +36,10 @@ import GroupWrapper from "./components/GroupWrapper/GroupWrapper";
 import Group from "./components/Group/Group";
 import Footer from "./components/Footer/Footer";
 import G2 from "./components/Group/G2";
+// import Clients from "./components/Client/Clients";
+
+import Cl from "../../src/views/components/Client/Cl";
+import Partners from "./components/Partners/Partners";
 
 const Home = () => {
   return (
@@ -44,7 +48,10 @@ const Home = () => {
         {/* <GroupWrapper /> */}
         {/* <G2 /> */}
         {/* <Group /> */}
-        <Footer />
+        {/* <Footer /> */}
+        {/* <Clients/> */}
+        <Cl/>
+        {/* <Partners/> */}
       </Container>
      
     </div>
