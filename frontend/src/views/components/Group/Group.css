@@ -1,9 +1,12 @@
 .group {
   height: 435px;
   left: calc(50% - 639px);
-  position: absolute;
-  top: 1554px;
-  width: 1296px;
+  position: relative;
+  /* top: 1554px;
+  width: 1296px; */
+  left: 50%;      /* center horizontally */
+  transform: translateX(-50%); /* proper centering */
+  width: 1296px;  
 }
 
 .group .rectangle-3 {
@@ -195,12 +198,12 @@
 }
 
 .group .line {
-  height: 168px;
-  left: 410px;
-  object-fit: cover;
   position: absolute;
   top: 172px;
+  left: 410px;
   width: 1px;
+  height: 168px;
+  background-color:white;
 }
 
 /* -------------------------------------------- */

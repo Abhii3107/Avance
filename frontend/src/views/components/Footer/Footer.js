@@ -3,6 +3,9 @@ import React from "react";
 import { Container, Row, Col, Button, Input } from "reactstrap";
 import "./Footer.css";
 
+import Phone from "../../assests/Footer/Phone.png"
+import Mail from "../../assests/Footer/Mail.png"
+
 export default function footer() {
   return (
     <footer className="footer">
@@ -36,9 +39,10 @@ export default function footer() {
             <Col xs="6" md="2" className="d-flex-flex-column-3">
               <a
                 className="text-wrapper-21"
-                href="https://retail.riskbirbal.com/"
-                rel="noopener noreferrer"
-                target="_blank"
+                // href="https://retail.riskbirbal.com/"
+                // rel="noopener noreferrer"
+                // target="_blank"
+
               >
                 Private Car Insurance
               </a>
@@ -126,13 +130,13 @@ export default function footer() {
         <img
           className="phone"
           alt="Phone"
-          src="https://c.animaapp.com/mfr8k808PpGNxz/img/phone.png"
+          src={Phone}
         />
 
         <img
           className="mail"
           alt="Mail"
-          src="https://c.animaapp.com/mfr8k808PpGNxz/img/mail.png"
+          src={Mail}
         />
 
         
@@ -142,32 +146,28 @@ export default function footer() {
           type="email"
         />
 
-        <div className="footer-social-media">
-          <img
-            className="link-facebook"
-            alt="Link facebook"
-            src="https://c.animaapp.com/mfr8k808PpGNxz/img/link-facebook.svg"
-          />
-          <img
-            className="link-twitter"
-            alt="Link twitter"
-            src="https://c.animaapp.com/mfr8k808PpGNxz/img/link-twitter.svg"
-          />
-          <img
-            className="link-instagram"
-            alt="Link instagram"
-            src="https://c.animaapp.com/mfr8k808PpGNxz/img/link-instagram.svg"
-          />
-          <img
-            className="link-linkedin"
-            alt="Link linkedin"
-            src="https://c.animaapp.com/mfr8k808PpGNxz/img/link-linkedin.svg"
-          />
-          <img
-            className="link-linkedin-mx"
-            alt="Link linkedin mx"
-            src="https://c.animaapp.com/mfr8k808PpGNxz/img/link-linkedin-mx-0.svg"
-          />
+       <div className="footer-social-media">
+  <img
+    className="link-facebook"
+    alt="Facebook"
+    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/facebook-f.svg"
+  />
+  <img
+    className="link-twitter"
+    alt="Twitter"
+    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/twitter.svg"
+  />
+  <img
+    className="link-instagram"
+    alt="Instagram"
+    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/instagram.svg"
+  />
+  <img
+    className="link-linkedin"
+    alt="LinkedIn"
+    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/linkedin-in.svg"
+  />
+
           <div className="text-wrapper-42">Social Media Links</div>
         </div>
       </div>
