@@ -32,6 +32,7 @@
 // Home.jsx
 import React,{useEffect} from "react";
 import { Container } from "reactstrap";
+import "./home.css";
 import GroupWrapper from "./components/GroupWrapper/GroupWrapper";
 import Group from "./components/Group/Group";
 import Footer from "./components/Footer/Footer";
@@ -43,20 +44,6 @@ import Partners from "./components/Partners/Partners";
 
 const Home = () => {
   let margin = { marginTop: "50px", marginBottom: "50px" };
-
-   useEffect(() => {
-    const updateSize = () => {
-      console.log("Monitor resolution:", window.screen.width + " x " + window.screen.height);
-    };
-
-    // log when component mounts
-    updateSize();
-
-    // update on resize
-    window.addEventListener("resize", updateSize);
-
-    return () => window.removeEventListener("resize", updateSize);
-  }, []);
 
   return (
     <div className="d-flex flex-column min-vh-100">

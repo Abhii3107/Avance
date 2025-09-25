@@ -16,24 +16,19 @@ export default function Group() {
         100+ Years of experience of core team members
       </p>
 
-      {/* <img
-        className="img"
-        alt="Group"
-        src="https://c.animaapp.com/mfr8k808PpGNxz/img/group-12.png"
-      /> */}
+      <div
+        className="mukesh-jairath label-box outer-box"
+        style={{ marginTop: "0.1px" ,marginLeft:"0.1px" }}
+      >
+        <div className="small-box left"></div>
 
-      {/* <p className="mukesh-jairath">
-        <span className="text-wrapper-44">Mukesh Jairath<br /></span>
-        <span className="text-wrapper-45">Director</span>
-      </p> */}
-
-      <p className="mukesh-jairath label-box">
+        <div className="small-box right"></div>
         <span className="text-wrapper-44">
           Mukesh Jairath
           <br />
         </span>
         <span className="text-wrapper-45">Director</span>
-      </p>
+      </div>
 
       <p className="umang-sharma-product">
         <span className="text-wrapper-46">

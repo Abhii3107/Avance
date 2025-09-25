@@ -1,14 +1,13 @@
+/* Root container */
 .group {
   height: 435px;
-  left: calc(50% - 639px);
   position: relative;
-  /* top: 1554px;
-  width: 1296px; */
-  left: 50%;      /* center horizontally */
+  left: 50%;                 /* center horizontally */
   transform: translateX(-50%); /* proper centering */
-  width: 1296px;  
+  width: 1296px;
 }
 
+/* Blue background card */
 .group .rectangle-3 {
   background-color: #053e84e6;
   border-radius: 30px;
@@ -19,6 +18,7 @@
   width: 1278px;
 }
 
+/* Subheading text */
 .group .text-wrapper-43 {
   color: #ffffffcc;
   font-family: "Axiforma-Regular", Helvetica, sans-serif;
@@ -33,6 +33,7 @@
   width: 33.33%;
 }
 
+/* Generic image label (if used) */
 .group .img {
   height: 33px;
   left: 427px;
@@ -41,6 +42,7 @@
   width: 135px;
 }
 
+/* Shared positioning for all name labels */
 .group .mukesh-jairath,
 .group .umang-sharma-product,
 .group .syed-meraj-naqvi,
@@ -53,13 +55,14 @@
   font-weight: 400;
   letter-spacing: 0.13px;
   line-height: 13px;
-  position: absolute;
+  position: absolute; /* establishes containing block for abspos children */
   text-align: center;
   top: 357px;
 }
 
+/* Individual lane alignment (percentages resolve against .group width) */
 .group .mukesh-jairath {
-  color: transparent;
+  color: transparent; /* children set their own colors */
   left: 33.8%;
   width: 8.26%;
 }
@@ -84,6 +87,7 @@
   width: 8.26%;
 }
 
+/* Typography utilities */
 .group .text-wrapper-44 {
   color: #ffffff;
   letter-spacing: 0.02px;
@@ -116,6 +120,7 @@
   line-height: 12px;
 }
 
+/* Paragraph block */
 .group .text-wrapper-49 {
   color: #ffffffcc;
   font-family: "Axiforma-Regular", Helvetica, sans-serif;
@@ -129,6 +134,7 @@
   width: 334px;
 }
 
+/* Section title */
 .group .text-wrapper-50 {
   color: #ffffff;
   font-family: "Axiforma-SemiBold", Helvetica, sans-serif;
@@ -143,6 +149,7 @@
   width: 12.11%;
 }
 
+/* Team images */
 .group .img-2 {
   height: 185px;
   left: 426px;
@@ -150,17 +157,6 @@
   top: 162px;
   width: 132px;
 }
-/* .group .img-2 {
-  position: absolute;
-  left: 515px;            
-  top: 166px;             
-  width: 120.916px;      
-  height: 170px;          
-  opacity: 1;             
-  transform: rotate(0deg);
-  object-fit: cover;
-} */
-
 .group .img-3 {
   height: 179px;
   left: 711px;
@@ -197,51 +193,80 @@
   width: 125px;
 }
 
+/* Divider line */
 .group .line {
   position: absolute;
   top: 172px;
   left: 410px;
   width: 1px;
   height: 168px;
-  background-color:white;
+  background-color: white;
 }
 
 /* -------------------------------------------- */
-
-/* director name label box */
+/* Director name label box: visual style only (position comes from .mukesh-jairath) */
 .group .label-box {
-  position: absolute;
-  left: 429px;
-  top: 352px;
-  width: 127.95738220214844px;
+  /* no left/top/width/position here — alignment is controlled by .mukesh-jairath */
   height: 33px;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
   background: #053e84;
   opacity: 1;
   transform: rotate(0deg);
-
-  /* Center two lines vertically and horizontally */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  /* Optional: ensure it sits above background elements */
-  z-index: 2;
+  /* Above nearby items; takes effect because element is positioned via .mukesh-jairath */
+  z-index: 20;
   box-sizing: border-box;
+  overflow: visible; /* let side diamonds protrude */
 }
 
-/* Typography inside the box */
+/* Optional text helpers if used directly under .label-box */
 .group .label-box .label-name {
   font-size: 12px;
   line-height: 12px;
   color: #ffffff;
 }
-
 .group .label-box .label-role {
   font-size: 9px;
   line-height: 12px;
   color: #ffffffcc;
   margin-top: 2px;
+}
+
+/* Side diamonds — scoped inside the label only */
+.group .label-box .small-box {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  z-index: 30; /* above the label background/text within same stacking context */
+}
+
+/* Left diamond: half outside */
+.group .label-box .small-box.left {
+  top: 50%;
+  left: -3.5px; /* half of 7px */
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Right diamond: half outside */
+.group .label-box .small-box.right {
+  top: 50%;
+  right: -3.5px; /* half of 7px */
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* Keep for compatibility if .outer-box class is present on the label element */
+.outer-box {
+  position: relative; /* establishes a positioned ancestor; harmless alongside absolute */
+}
+
+/* —— Targeted nudge: move ONLY Mukesh label up a bit —— */
+.group .mukesh-jairath {
+  top: 353px; /* was 357px; decrease to move up */
 }

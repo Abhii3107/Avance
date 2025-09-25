@@ -1,19 +1,43 @@
 .home-container {
   padding: 0;
   margin: 0 auto;
-  max-width: 1440px; /* adjust as per design */
+  max-width: 1440px; 
   background-color: #ffffff;
   font-family: "Axiforma", sans-serif;
 }
 
-/* General section spacing */
+
 .home-container section {
   padding: 60px 20px;
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .home-container section {
     padding: 40px 15px;
+  }
+}
+
+
+/* Home.css */
+
+/* Primary approach: flex column + gap */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px; /* Adjust spacing as needed */
+}
+
+/* Optional: tweak spacing per breakpoint
+@media (max-width: 576px) {
+  .home-container { gap: 32px; }
+}
+
+
+/* Fallback for environments without flex-gap support:
+   Adds top margin to every direct child after the first */
+@supports not (gap: 1rem) {
+  .home-container > * + * {
+    margin-top: 50px;
   }
 }
