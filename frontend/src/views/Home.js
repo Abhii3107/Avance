@@ -51,7 +51,7 @@ const Home = () => {
         {/* <Footer /> */}
         {/* <Clients/> */}
         <Cl/>
-        {/* <Partners/> */}
+        <Partners/>
       </Container>
      
     </div>

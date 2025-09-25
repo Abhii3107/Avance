@@ -14,26 +14,31 @@ const imgs = [chola, care, aditya, iffo, national, sbi];
 function Partners() {
   return (
     <>
-      <div className="outer">
-        <div className="inner-1"></div>
+      <Container>
+        <div className="outer mirror">
+          <div className="overlay">
+            <div className="inner-two"></div>
+          </div>
 
-        <div className="z">
-          <div className="inner-2"></div>
+          <div className="inner-one">
+            <span className="clients-text">partners</span>
+          </div>
         </div>
-      </div>
 
-      <Container fluid className="clients-outer-partner">
-        <div className="clients-row-partner">
-          {imgs.map((src, i) => (
-            <div className="client-box-partner" key={i}>
-              <img
-                src={src}
-                alt={`client-${i + 1}`}
-                className="client-img-partner"
-              />
-            </div>
-          ))}
-        </div>
+        <Container fluid className="clients-outer-partner">
+            <span className="partner-text">40 + insurance partners</span>
+          <div className="clients-row-partner">
+            {imgs.map((src, i) => (
+              <div className="client-box-partner" key={i}>
+                <img
+                  src={src}
+                  alt={`client-${i + 1}`}
+                  className="client-img-partner"
+                />
+              </div>
+            ))}
+          </div>
+        </Container>
       </Container>
     </>
   );

@@ -67,19 +67,64 @@
 
 /* -----------*/
 
-/* Clients.css */
-.clients-container {
-  color: white;
+/*our client box*/
+
+.outer-box{
+  margin-top: 50px;
+  /* border: 1px solid black; */
+   border: none;
+  display: flex;
   width: 431px;
   height: 60px;
-  /* top: 768px; */
-  left: 81px;
-  background-color: rgba(115, 75, 142, 1);
+  overflow: hidden;
+  margin-left:9px;
+}
+
+.inner-1 {
+  background-color:rgba(115, 75, 142, 1);
+  /* border: 1px solid black; */
+  border: none;
+  width: 50%;
+  height: 60px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+ 
+  
+}
+.clients-text {
+  /* Layout */
+  width: 180px;
+  height: 29px;
   opacity: 1;
+
+  /* Positioning */
   display: flex;
-  align-items: center;
-  justify-content: flex-start; /* aligns text left inside the container */
-  padding-left: 62px; /* approximate offset to match inner text left */
-  margin-left: 514px;
+  justify-content: center;  
+  align-items: center;      
+
+  /* Typography */
+  font-family: "Axiforma", sans-serif;
+  font-weight: 600; 
+  font-size: 25px;
+  /* line-height: 28.8px; */
+  /* letter-spacing: 0.14px; */
+  color: white;
+  text-align: center;
+  margin-top: 13px;
+  margin-left: 10px;
+}
+.inner-2 {
+  background-color: white;
+  height: 60px;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  z-index: 0;
+}
+.z {
+  width: 50%;
+  height: 60px;
+  position: relative;
+  background-color: rgba(115, 75, 142, 1);
+  z-index: 12;
 }
 
