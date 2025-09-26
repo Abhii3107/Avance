@@ -32,7 +32,7 @@
 // Home.jsx
 import React,{useEffect} from "react";
 import { Container } from "reactstrap";
-import "./home.css";
+// import "./home.css";
 import GroupWrapper from "./components/GroupWrapper/GroupWrapper";
 import Group from "./components/Group/Group";
 import Footer from "./components/Footer/Footer";
