@@ -91,14 +91,25 @@ export default function footer() {
 
         <p className="contact-us">
           <span className="span">
-            Contact Us <br />
+            Contact Us 
+               <img style={{marginLeft:"4px"}}
+          className="phone-1"
+          alt="Phone"
+          src={Phone}
+        />
+        <br />
           </span>
           <span className="text-wrapper-38">+011-45521738</span>
         </p>
 
         <p className="mail-id-info">
           <span className="span">
-            Mail Id <br />
+            Mail Id 
+             <img style={{marginLeft:"4px"}}
+          className="mail-2"
+          alt="Mail"
+          src={Mail}
+        /><br />
           </span>
           <span className="text-wrapper-38">info@riskbirbal.com</span>
         </p>
@@ -127,17 +138,17 @@ export default function footer() {
           30-04-2026.
         </p>
 
-        <img
+        {/* <img
           className="phone"
           alt="Phone"
           src={Phone}
-        />
+        /> */}
 
-        <img
+        {/* <img
           className="mail"
           alt="Mail"
           src={Mail}
-        />
+        /> */}
 
         
         <Input

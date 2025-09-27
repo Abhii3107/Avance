@@ -11,37 +11,32 @@ import sbi from "../../assests/Partners/sbi.png";
 
 const imgs = [chola, care, aditya, iffo, national, sbi];
 
-function Partners() {
+export default function Partners() {
   return (
-    <>
-      <Container>
-        <div className="outer mirror">
-          <div className="overlay">
-            <div className="inner-two"></div>
-          </div>
-
-          <div className="inner-one">
-            <span className="clients-text">partners</span>
-          </div>
+    <Container className="partners-section">
+      <div className="outer mirror">
+        <div className="overlay">
+          <div className="inner-two" />
         </div>
+        <div className="inner-one">
+          <span className="clients-text">partners</span>
+        </div>
+      </div>
 
-        <Container fluid className="clients-outer-partner">
-            <span className="partner-text">40 + insurance partners</span>
-          <div className="clients-row-partner">
-            {imgs.map((src, i) => (
-              <div className="client-box-partner" key={i}>
-                <img
-                  src={src}
-                  alt={`client-${i + 1}`}
-                  className="client-img-partner"
-                />
-              </div>
-            ))}
-          </div>
-        </Container>
+      <Container fluid className="clients-outer-partner">
+        <span className="partner-text">40+ Insurance partners</span>
+        <div className="clients-row-partner">
+          {imgs.map((src, i) => (
+            <div className="client-box-partner" key={i}>
+              <img
+                src={src}
+                alt={`partner-${i + 1}`}
+                className="client-img-partner"
+              />
+            </div>
+          ))}
+        </div>
       </Container>
-    </>
+    </Container>
   );
 }
-
-export default Partners;

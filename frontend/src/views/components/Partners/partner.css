@@ -1,179 +1,245 @@
-/* src/components/partner.css */
+/* CSS Custom Properties */
+:root {
+  --partner-primary: rgba(5, 62, 132, 1);
+  --partner-primary-transparent: rgba(5, 62, 132, 0.1);
+  --heading-radius: 20px;
+  --box-radius: 30px;
+  --gap-size: 20px;
+}
 
-/* Outer container */
+/* ====== PARTNERS SECTION CONTAINER ====== */
+.partners-section {
+  position: relative;
+  padding-right: 0 !important; /* Remove right padding from Container */
+}
+
+/* ====== RIGHT-ALIGNED PARTNERS HEADING ====== */
+.outer {
+  display: flex;
+  justify-content: flex-end;
+  width: clamp(280px, 28.3vw, 431px);
+  height: 60px;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-left: 57.3rem; /* Push to right edge of container */
+  margin-right: 0; /* No right margin */
+  margin-bottom: 0; /* No bottom gap */
+}
+
+.inner-one {
+  background: var(--partner-primary);
+  width: 50%;
+  height: 60px;
+  border-top-left-radius: var(--heading-radius);
+  border-top-right-radius: var(--heading-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-text {
+  font-family: "Axiforma", sans-serif;
+  font-weight: 600;
+  font-size: clamp(16px, 2vw, 25px);
+  color: #fff;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.overlay {
+  width: 50%;
+  height: 60px;
+  position: relative;
+  background: var(--partner-primary);
+  z-index: 12;
+}
+
+.inner-two {
+  background: #fff;
+  width: 100%;
+  height: 60px;
+  border-bottom-right-radius: var(--heading-radius);
+  z-index: 0;
+}
+
+/* ====== PARTNERS CONTAINER ====== */
 .clients-outer-partner {
-  width: 1278px;
+  width: clamp(300px, 88.6vw, 1348px);
+  max-width: 1348px;
   height: 278px;
-
-  /* Solid color as specified */
-  background: rgba(5, 62, 132, 0.1);
-
-  /* Rounded corners per sides specified */
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 30px;
-  border-bottom-left-radius: 30px;
-
-  /* Combine inset and regular shadow (unchanged) */
-  box-shadow: inset 0px 4px 9.1px 1px rgba(115, 75, 142, 0.1),
-    0px 4px 0px 0px rgba(255, 255, 255, 0.25);
-
-  /* Frosted glass blur over translucent background */
-  backdrop-filter: blur(9.8px);
-  -webkit-backdrop-filter: blur(9.8px);
-
-  opacity: 1;
-
-  /* Layout */
+  background: var(--partner-primary-transparent);
+  border-bottom-left-radius: var(--box-radius);
+  border-bottom-right-radius: var(--box-radius);
   display: flex;
   align-items: center;
   padding: 24px;
   box-sizing: border-box;
+  box-shadow:
+    inset 0 4px 9.1px 1px rgba(115, 75, 142, 0.1),
+    0 4px 0 0 rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(9.8px);
+  -webkit-backdrop-filter: blur(9.8px);
+  position: relative;
+  margin: 0 auto;
 }
 
-/* Row that holds the five boxes */
 .clients-row-partner {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px; /* controls spacing between boxes */
+  gap: var(--gap-size);
   width: 100%;
+  flex-wrap: nowrap;
 }
 
-/* Each 200x200 box */
 .client-box-partner {
   width: 200px;
   height: 200px;
-  border-radius: 30px;
-
-  /* Radial gradient as specified */
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: var(--box-radius);
   background: radial-gradient(
     93% 93% at 50% 52.5%,
     rgba(5, 62, 132, 0.024) 0%,
     rgba(5, 62, 132, 0.4) 100%
   );
-
-  /* Combine inset and regular shadow in one declaration */
-  box-shadow: inset 0px 4px 9.1px 1px rgba(115, 75, 142, 0.1),
-    0px 4px 0px 0px rgba(255, 255, 255, 0.25);
-
-  /* Backdrop blur for frosted effect */
+  box-shadow:
+    inset 0 4px 9.1px 1px rgba(115, 75, 142, 0.1),
+    0 4px 0 0 rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(9.8px);
   -webkit-backdrop-filter: blur(9.8px);
-
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
 }
 
-/* Image fit */
 .client-img-partner {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* use 'cover' if full-bleed is desired */
+  object-fit: contain;
 }
 
-/* Optional heading container */
-.clients-container-partner {
-  color: white;
-  width: 431px;
-  height: 60px;
-  background-color: rgba(115, 75, 142, 1);
-  opacity: 1;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-left: 62px;
-  margin-left: 514px;
-}
-
-/*-----------------------------------*/
-/*our client box*/
-
-.outer {
-  margin-top: 50px;
-  /* border: 1px solid black; */
-   border: none;
-  display: flex;
-  width: 431px;
-  height: 60px;
-  overflow: hidden; 
-  justify-content:flex-end;
-  margin-left: 53.51rem;
-}
-
-.inner-one {
-  background-color:rgba(5, 62, 132, 1);
-  /* border: 1px solid black; */
-  border: none;
-  width: 50%;
-  height: 60px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
- 
-  
-}
-.clients-text {
-  /* Layout */
-  width: 180px;
-  height: 29px;
-  opacity: 1;
-
-  /* Positioning */
-  display: flex;
-  justify-content: center;  
-  align-items: center;      
-
-  /* Typography */
-  font-family: "Axiforma", sans-serif;
-  font-weight: 600; 
-  font-size: 25px;
-  /* line-height: 28.8px; */
-  /* letter-spacing: 0.14px; */
-  color: white;
-  text-align: center;
-  margin-top: 13px;
-  margin-left: 10px;
-}
-.inner-two {
-  background-color: white;
-  height: 60px;
-  width: 100%;
-  border-bottom-left-radius: 20px;
-  z-index: 0;
-}
-.overlay {
-  width: 50%;
-  height: 60px;
-  position: relative;
-  background-color: rgba(5, 62, 132, 1);
-  z-index: 12;
-}
-
-/* mirror version */
-.outer.mirror .inner-one {
-  border-top-left-radius: 20px;       /* remove old rounding */
-  border-top-right-radius: 20px;   /* keep right rounded */
-}
-
-.outer.mirror .inner-two {
-  border-bottom-left-radius: 0;    /* remove old rounding */
-  border-bottom-right-radius: 20px;/* mirror rounding */
-}
-
-
-/*40 + insurance*/
+/* ====== FLOATING TEXT - NO BACKGROUND ====== */
 .partner-text {
-   position: absolute; /* anchor to the parent box */
-   width: 208px;
-   height: 26px;
- /* font-weight: 400px; */
+  position: absolute;
   top: 8px;
   right: 12px;
-  z-index: 1;         /* keep above logos if needed */
-  padding: 6px 10px;
-  border-radius: 12px;
-  /* font-size: 14px; */
-  line-height: 0.5;
-  size: 18px;
+  z-index: 1;
+  font-size: clamp(12px, 1vw, 14px);
+  font-family: "Axiforma", sans-serif;
+  color: #333;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+
+/* Large screens - maintains exact design */
+@media (min-width: 1440px) {
+  .clients-outer-partner {
+    width: 1348px;
+  }
+  .outer {
+    width: 431px;
+  }
+  .client-box-partner {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 1439px) and (min-width: 1024px) {
+  .clients-outer-partner {
+    width: 85vw;
+    height: 250px;
+  }
+  .client-box-partner {
+    width: calc(13vw - 15px);
+    height: calc(13vw - 15px);
+    max-width: 180px;
+    max-height: 180px;
+  }
+  .outer {
+    width: 30vw;
+    max-width: 380px;
+  }
+}
+
+/* Medium-small screens */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .clients-outer-partner {
+    width: 90vw;
+    height: 220px;
+    padding: 20px;
+  }
+  .client-box-partner {
+    width: calc(12vw - 12px);
+    height: calc(12vw - 12px);
+    max-width: 160px;
+    max-height: 160px;
+    min-width: 120px;
+    min-height: 120px;
+  }
+  .clients-row-partner {
+    gap: 15px;
+  }
+  .outer {
+    width: 35vw;
+    max-width: 320px;
+  }
+}
+
+/* Small screens */
+@media (max-width: 767px) {
+  .clients-outer-partner {
+    width: 95vw;
+    height: auto;
+    padding: 15px;
+  }
+  .clients-row-partner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .client-box-partner {
+    width: calc(45vw - 20px);
+    height: calc(45vw - 20px);
+    max-width: 140px;
+    max-height: 140px;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .outer {
+    width: 60vw;
+    max-width: 280px;
+  }
+  .partner-text {
+    font-size: 12px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+  .clients-outer-partner {
+    width: 98vw;
+    padding: 10px;
+  }
+  .clients-row-partner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .client-box-partner {
+    width: 120px;
+    height: 120px;
+  }
+  .outer {
+    width: 80vw;
+    max-width: 250px;
+  }
+  .partner-text {
+    font-size: 11px;
+  }
 }
