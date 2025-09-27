@@ -1,187 +1,152 @@
 // Footer.jsx
 import React from "react";
-import { Container, Row, Col, Button, Input } from "reactstrap";
+import { Container, Button, Input } from "reactstrap";
 import "./Footer.css";
 
-import Phone from "../../assests/Footer/Phone.png"
-import Mail from "../../assests/Footer/Mail.png"
+import Phone from "../../assests/Footer/Phone.png";
+import Mail from "../../assests/Footer/Mail.png";
 
-export default function footer() {
+export default function Footer() {
   return (
     <footer className="footer">
-      <div className="div-2">
-        <Container className="container">
-          <div className="text-wrapper-9">Riskbirbal Insurance Brokers</div>
+      <Container className="footer-container">
+        {/* Brand Title */}
+        <h2 className="brand-title">Riskbirbal Insurance Brokers</h2>
 
-          <Row className="row">
-            <Col xs="12" className="licenses-d-flex-flex" />
+        {/* Top grid: 5 columns */}
+        <div className="links-grid">
+          {/* Retail Insurance */}
+          <div className="col-block">
+            <h3 className="col-heading">Retail Insurance</h3>
+            <a href="#" className="link-item">Private Car Insurance</a>
+            <a href="#" className="link-item">PCV Insurance</a>
+            <a href="#" className="link-item">GCV Insurance</a>
+            <a href="#" className="link-item">Health Insurance</a>
+            <a href="#" className="link-item">Travel Insurance</a>
+            <a href="#" className="link-item">Home Insurance</a>
+          </div>
 
-            <Col xs="6" md="2" className="d-flex-flex-column">
-              <div className="text-wrapper-10">Important Documents</div>
-              <div className="text-wrapper-11">Privacy Policy</div>
-              <div className="text-wrapper-12">Disclaimer</div>
-              <div className="text-wrapper-13">Grievances</div>
-              <div className="text-wrapper-14">Terms of Service</div>
-              <div className="text-wrapper-15">Blogs</div>
-              <div className="text-wrapper-15">Gallery</div>
-            </Col>
+          {/* Corporate Insurance */}
+          <div className="col-block">
+            <h3 className="col-heading">Corporate Insurance</h3>
+            <a href="#" className="link-item">Fire Insurance</a>
+            <a href="#" className="link-item">Marine Insurance</a>
+            <a href="#" className="link-item">Liability Insurance</a>
+            <a href="#" className="link-item">Engineering Insurance</a>
+            <a href="#" className="link-item">Group Insurance</a>
+            <a href="#" className="link-item">Cyber Insurance</a>
+          </div>
 
-            <Col xs="6" md="2" className="d-flex-flex-column-2">
-              <div className="text-wrapper-16">Important Links</div>
-              <div className="text-wrapper-17">About Us</div>
-              <div className="text-wrapper-18">Achievements</div>
-              <div className="claims-services">Claims &amp; Services</div>
-              <div className="text-wrapper-19">Careers</div>
-              <div className="text-wrapper-20">Contact</div>
-              <div className="FAQ-s">FAQ's</div>
-            </Col>
+          {/* Important Links */}
+          <div className="col-block">
+            <h3 className="col-heading">Important Links</h3>
+            <a href="#" className="link-item">About Us</a>
+            <a href="#" className="link-item">Achievements</a>
+            <a href="#" className="link-item">Claims &amp; Services</a>
+            <a href="#" className="link-item">Careers</a>
+            <a href="#" className="link-item">Contact</a>
+            <a href="#" className="link-item">FAQ’s</a>
+          </div>
 
-            <Col xs="6" md="2" className="d-flex-flex-column-3">
-              <a
-                className="text-wrapper-21"
-                // href="https://retail.riskbirbal.com/"
-                // rel="noopener noreferrer"
-                // target="_blank"
+          {/* Important Documents */}
+          <div className="col-block">
+            <h3 className="col-heading">Important Documents</h3>
+            <a href="#" className="link-item">Privacy Policy</a>
+            <a href="#" className="link-item">Disclaimer</a>
+            <a href="#" className="link-item">Grievances</a>
+            <a href="#" className="link-item">Terms of Service</a>
+            <a href="#" className="link-item">Blogs</a>
+            <a href="#" className="link-item">Gallery</a>
+          </div>
 
-              >
-                Private Car Insurance
-              </a>
-              <div className="text-wrapper-22">PCV Insurance</div>
-              <div className="text-wrapper-23">GCV Insurance</div>
-              <div className="text-wrapper-24">Health Insurance</div>
-              <div className="text-wrapper-25">Travel Insurance</div>
-              <div className="text-wrapper-26">Home Insurance</div>
-            </Col>
+          {/* Newsletter */}
+          <div className="newsletter-block">
+            <h3 className="col-heading">Sign-up for Newsletter</h3>
+            <div className="muted">Stay Updated!</div>
+            <Input
+              className="email-input"
+              placeholder="Enter Email Address"
+              type="email"
+              aria-label="Email address"
+            />
+            <Button className="subscribe-btn" aria-label="Subscribe">
+              Subscribe
+            </Button>
+          </div>
+        </div>
 
-            <Col xs="6" md="2" className="d-flex-flex-column-4">
-              <div className="text-wrapper-27">Fire Insurance</div>
-              <div className="text-wrapper-28">Marine Insurance</div>
-              <div className="text-wrapper-29">Liability Insurance</div>
-              <div className="text-wrapper-30">Engineering Insurance</div>
-              <div className="text-wrapper-31">Group Insurance</div>
-              <div className="text-wrapper-32">Cyber Insurance</div>
-            </Col>
+        {/* Separator with pill label */}
+        <div className="sep-wrap">
+          <div className="sep-line" />
+          <div className="sep-pill">
+            <span>Reach us</span>
+          </div>
+        </div>
 
-            <Col xs="12" md="4" className="form">
-              <div className="text-wrapper-33">Sign-up for Newsletter</div>
-              <div className="text-wrapper-34">Stay Updated!</div>
-              <Button className="button-btn-btn">
-                <div className="text-wrapper-35">Subscribe</div>
-              </Button>
-            </Col>
-
-            <Col xs="6">
-              <div className="text-wrapper-36">Corporate Insurance</div>
-            </Col>
-            <Col xs="6">
-              <div className="text-wrapper-37">Retail Insurance</div>
-            </Col>
-          </Row>
-        </Container>
-
-        <p className="regd-corp-office">
-          <span className="span">
-            Regd &amp; Corp Office: <br />
-          </span>
-          <span className="text-wrapper-38">
-            302, DDA Building No. 2, Janakpuri District Centre, New Delhi,
-            110058.
-          </span>
-        </p>
-
-        <p className="contact-us">
-          <span className="span">
-            Contact Us 
-               <img style={{marginLeft:"4px"}}
-          className="phone-1"
-          alt="Phone"
-          src={Phone}
-        />
-        <br />
-          </span>
-          <span className="text-wrapper-38">+011-45521738</span>
-        </p>
-
-        <p className="mail-id-info">
-          <span className="span">
-            Mail Id 
-             <img style={{marginLeft:"4px"}}
-          className="mail-2"
-          alt="Mail"
-          src={Mail}
-        /><br />
-          </span>
-          <span className="text-wrapper-38">info@riskbirbal.com</span>
-        </p>
-
-        <div className="group-2">
-          <div className="copyright">
-            <div className="rectangle" />
-            <div className="text-white-d-inline">
-              <div className="text-wrapper-39">Copyright © 2023</div>
-              <p className="p">Riskbirbal Insurance Brokers Pvt Ltd</p>
-              <div className="all-rights-reserved">
-                |&nbsp;&nbsp;All Rights Reserved.
-              </div>
+        {/* Bottom grid: 4 columns */}
+        <div className="bottom-grid">
+          {/* Office */}
+          <div className="bottom-block">
+            <div className="bottom-title">Regd &amp; Corp Office:</div>
+            <div className="bottom-text">
+              302, DDA Building No. 2, Janakpuri District Centre, New Delhi, 110058.
             </div>
           </div>
 
-          <div className="seprator-line">
-            <div className="rectangle-2" />
-            <div className="text-wrapper-40">Reach us</div>
+          {/* Contact */}
+          <div className="bottom-block">
+            <div className="bottom-title with-icon">
+              Contact Us
+              <img className="inline-icon" alt="Phone" src={Phone} />
+            </div>
+            <div className="bottom-text">+011-45521738</div>
+          </div>
+
+          {/* Mail */}
+          <div className="bottom-block">
+            <div className="bottom-title with-icon">
+              Mail Id
+              <img className="inline-icon" alt="Mail" src={Mail} />
+            </div>
+            <div className="bottom-text">info@riskbirbal.com</div>
+          </div>
+
+          {/* Social */}
+          <div className="bottom-block social-block">
+            <div className="bottom-title">Social Media Links</div>
+            <div className="social-row">
+              <a className="icon-btn" href="#" aria-label="Facebook">
+                <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/facebook-f.svg" alt="Facebook" />
+              </a>
+              <a className="icon-btn" href="#" aria-label="X">
+                <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/x-twitter.svg" alt="X" />
+              </a>
+              <a className="icon-btn" href="#" aria-label="Instagram">
+                <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/instagram.svg" alt="Instagram" />
+              </a>
+              <a className="icon-btn" href="#" aria-label="LinkedIn">
+                <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/linkedin-in.svg" alt="LinkedIn" />
+              </a>
+              <a className="icon-btn" href="#" aria-label="YouTube">
+                <img src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/youtube.svg" alt="YouTube" />
+              </a>
+            </div>
           </div>
         </div>
 
-        <p className="text-wrapper-41">
-          This site is owned and operated by RiskBirbal Insurance Brokers Pvt.
-          Ltd. IRDA Reg. No.896, CIN: U67100DL2022PTC407258, valid till
-          30-04-2026.
+        {/* Registration line */}
+        <p className="reg-line">
+          This site is owned and operated by RiskBirbal Insurance Brokers Pvt. Ltd. IRDA Reg. No.896,
+          CIN: U67100DL2022PTC407258, valid till 30-04-2026.
         </p>
 
-        {/* <img
-          className="phone"
-          alt="Phone"
-          src={Phone}
-        /> */}
-
-        {/* <img
-          className="mail"
-          alt="Mail"
-          src={Mail}
-        /> */}
-
-        
-        <Input
-          className="input"
-          placeholder="Enter Email Address"
-          type="email"
-        />
-
-       <div className="footer-social-media">
-  <img
-    className="link-facebook"
-    alt="Facebook"
-    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/facebook-f.svg"
-  />
-  <img
-    className="link-twitter"
-    alt="Twitter"
-    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/twitter.svg"
-  />
-  <img
-    className="link-instagram"
-    alt="Instagram"
-    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/instagram.svg"
-  />
-  <img
-    className="link-linkedin"
-    alt="LinkedIn"
-    src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/svgs/brands/linkedin-in.svg"
-  />
-
-          <div className="text-wrapper-42">Social Media Links</div>
+        {/* Copyright */}
+        <div className="copy-strip">
+          <span>Copyright © 2023</span>
+          <span>Riskbirbal Insurance Brokers Pvt Ltd</span>
+          <span>|&nbsp;&nbsp;All Rights Reserved.</span>
         </div>
-      </div>
+      </Container>
     </footer>
   );
-};
+}
